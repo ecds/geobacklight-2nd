@@ -1,10 +1,10 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
-et :application, "geoblacklight-capped"
+set :application, "geoblacklight-capped"
 set :repo_url, "git@github.com:ecds/geoblacklight-2nd.git"
 set :user, "ec2-user"
 set :stages, %w(development)
-
+set :ssh_options, keys: %w(/home/shilli2/.ssh/library_team.pem)
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

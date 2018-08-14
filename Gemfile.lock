@@ -336,6 +336,7 @@ DEPENDENCIES
   blacklight (>= 6.3)
   byebug
   capistrano (~> 3.11)
+  capistrano-bundler
   capistrano-rails
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -360,4 +361,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.3

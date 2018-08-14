@@ -44,6 +44,8 @@ end
 group :development do
   gem "capistrano", "~> 3.11", require: false
   gem "capistrano-rails"
+  #gem "capistrano-sshkit"
+  gem "capistrano-bundler"
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
