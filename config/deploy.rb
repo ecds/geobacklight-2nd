@@ -6,6 +6,8 @@ set :user, "ec2-user"
 set :stages, %w(development)
 set :ssh_options, keys: %w(/home/shilli2/.ssh/library_team.pem)
 
+set :bundle_cmd, "/home/ec2-user/bin/bundle"
+
 set :default_env, {
 	'PATH' => "#{ENV['PATH']}#{ENV['RUBY_PATH']}",
 }
