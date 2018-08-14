@@ -7,7 +7,7 @@ set :stages, %w(development)
 set :ssh_options, keys: %w(/home/shilli2/.ssh/library_team.pem)
 
 set :default_env, {
-	'PATH' => "#{ENV['RUBY_PATH']}",
+	'PATH' => "#{ENV['PATH']}#{ENV['RUBY_PATH']}",
 }
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
