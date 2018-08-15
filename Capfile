@@ -29,8 +29,6 @@ install_plugin Capistrano::SCM::Git
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
-set :bundle_cmd, "/home/ec2-user/bin/bundle"
-set :bundle_dir, "/home/ec2-user/bin"
  require "capistrano/bundler"
  require "capistrano/rails/assets"
  require "capistrano/rails/migrations"
