@@ -70,9 +70,18 @@ GEM
     capistrano-bundler (1.3.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rails-collection (0.1.0)
+      capistrano-rails (~> 1.1)
+    capistrano-sidekiq (0.20.0)
+      capistrano (>= 3.9.0)
+      sidekiq (>= 3.4)
     capybara (2.18.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -95,6 +104,7 @@ GEM
       activesupport (>= 3.0)
       deep_merge (~> 1.2.1)
       dry-validation (>= 0.10.4)
+    connection_pool (2.2.2)
     crass (1.0.4)
     deep_merge (1.2.1)
     deprecation (1.0.0)
@@ -229,6 +239,8 @@ GEM
     public_suffix (3.0.2)
     puma (3.12.0)
     rack (2.0.5)
+    rack-protection (2.0.3)
+      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -258,6 +270,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redis (4.0.2)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -286,6 +299,10 @@ GEM
     selenium-webdriver (3.13.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    sidekiq (5.2.1)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
     solr_wrapper (2.0.0)
       faraday
       retriable
@@ -340,7 +357,13 @@ PLATFORMS
 DEPENDENCIES
   blacklight (>= 6.3)
   byebug
+  capistrano
+  capistrano-bundler (~> 1.3)
+  capistrano-ext
+  capistrano-passenger
   capistrano-rails
+  capistrano-rails-collection
+  capistrano-sidekiq (~> 0.20.0)
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
