@@ -2,7 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, "geoblacklight"
-set :repo_url, "git@github.com:ecds/geoblacklight-2nd.git"
+set :repo_url, "https://github.com/ecds/geoblacklight-2nd.git"
 set :deploy_to, '/opt/geoblacklight'
 set :rails_env, 'production'
 set :default_env, 'PASSENGER_INSTANCE_REGISTRY_DIR' => '/var/run'
