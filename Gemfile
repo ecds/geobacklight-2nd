@@ -63,8 +63,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'blacklight', '>= 6.3'
-gem 'geoblacklight', :git => 'https://github.com/ecds/geoblacklight', :branch => 'configure-for-ecds'
+gem 'blacklight', '7.0.0.rc1'
+gem 'geoblacklight', '>= 1.9', :git => 'https://github.com/ecds/geoblacklight', :branch => 'configure-for-ecds'
 #gem 'geoblacklight', '>= 1.4'
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
