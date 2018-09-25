@@ -61,7 +61,6 @@ end
 
 before 'deploy:updated', 'custom:run_gb_install'
 
-
 namespace :deploy do
   after :finishing, :restart_apache do
     on roles(:app) do
