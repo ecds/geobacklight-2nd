@@ -51,7 +51,7 @@ namespace :custom do
     on roles(:app) do
       within "#{release_path}" do
         with rails_env: "production" do
-          execute :rails, "generate blacklight:install --devise"
+          execute :rails, "generate blacklight:install --devise -f"
           execute :rails, "generate 'geoblacklight:install -f"
         end
       end
