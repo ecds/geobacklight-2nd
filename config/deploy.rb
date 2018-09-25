@@ -44,7 +44,23 @@ append :linked_files, "config/secrets.yml"
 
 # After the code has been deployed, run db:seed
 # This creates the default admin user
-after 'deploy:published', 'rails:rake:db:seed'
+#after 'deploy:published', 'rails:rake:db:seed'
+namespace :custom do
+  desc 'Run geoblacklight install and blacklight install'
+  task :run_gb_install do
+    on roles(:app) do
+      within "#{release_path}" do
+        with rails_env: "production" do
+          execute :rails, "generate blacklight:install --devise"
+          execute :rails, "generate 'geoblacklight:install', '-f'"
+        end
+      end
+    end
+  end
+end
+
+before 'deploy:updated', 'custom:run_gb_install'
+
 
 namespace :deploy do
   after :finishing, :restart_apache do
