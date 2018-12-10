@@ -7,6 +7,7 @@ end
 
 gem 'mysql2'
 #gem 'capistrano-rails'
+gem 'sidekiq'
 #gem 'pg'
 gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
