@@ -57,8 +57,6 @@ append :linked_files, "config/secrets.yml"
 #    end
 #  end
 #end
-
-
 before 'deploy:updated', 'custom:run_gb_install'
 
 namespace :deploy do
