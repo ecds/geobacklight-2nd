@@ -6,15 +6,15 @@ set :repo_url, "https://github.com/ecds/geoblacklight-2nd.git"
 set :deploy_to, '/opt/geoblacklight'
 set :rails_env, 'production'
 set :default_env, 'PASSENGER_INSTANCE_REGISTRY_DIR' => '/var/run'
-set :assets_prefix, "#{shared_path}/public/assets"
+#set :assets_prefix, "#{shared_path}/public/assets"
 
 SSHKit.config.command_map[:rake] = 'bundle exec rake'
 #SSHKit.config.command_map[:sidekiq] = "bundle exec /opt/rh/rh-ruby25/root/usr/bin/sidekiq"
-set :sidekiq, "bundle exec /opt/rh/rh-ruby25/root/usr/bin/sidekiq"
+#set :sidekiq, "bundle exec /opt/rh/rh-ruby25/root/usr/bin/sidekiq"
 set :branch, ENV['REVISION'] || ENV['BRANCH'] || ENV['BRANCH_NAME'] || 'master'
 
 append :linked_dirs, "log"
-append :linked_dirs, "public/assets"
+#append :linked_dirs, "public/assets"
 append :linked_dirs, "tmp/pids"
 append :linked_dirs, "tmp/cache"
 append :linked_dirs, "tmp/sockets"
@@ -83,7 +83,7 @@ end
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
 
 # Default value for :pty is false
- set :pty, true
+# set :pty, true
 
 # Default value for :linked_files is []
 # append :linked_files, "config/database.yml"
