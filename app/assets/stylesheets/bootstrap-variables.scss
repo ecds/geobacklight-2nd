@@ -1,4 +1,7 @@
 $navbar-height: 62px;
-$navbar-color: #012169;
-$brand-primary: #FFFF33;
-$navbar-header-color: 012169;
+$brand-primary: #012169;
+
+.navbar-default {
+    background-color: #012169;
+    border-color: #E7E7E7;
+}
