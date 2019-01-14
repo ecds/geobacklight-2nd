@@ -1,12 +1,5 @@
 @import 'bootstrap-sprockets';
-
+@import 'bootstrap-variables';
 @import 'bootstrap';
 
 @import 'blacklight/blacklight';
-
-.navbar-default {
-    background-color: #012169;
-    border-color: #E7E7E7;
-}
-
-$brand-primary: #012169;
