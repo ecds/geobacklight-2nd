@@ -68,7 +68,12 @@ namespace :deploy do
   end
 end
 
-
+namespace :deploy do
+  Rake::Task["migrate"].clear_actions
+  task :migrate do
+    puts "no migration"
+  end
+end
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
