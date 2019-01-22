@@ -1,7 +1,28 @@
+// These are reserved Bootstrap 3.3 variables. See complete list here:
+// https://getbootstrap.com/docs/3.3/customize/
 $navbar-height: 62px;
 $brand-primary: #012169;
+$navbar-inverse-bg: #012169;
+$navbar-inverse-link-color: #8499ca;
+$navbar-inverse-toggle-icon-bar-bg: #8499ca;
+$navbar-inverse-toggle-hover-bg: #8499ca;
+$navbar-inverse-toggle-border-color: #8499ca;
 
-.header-navbar {
-    background-color: #012169;
-    border-color: #FFFF33;
+// This is an override to the default logo
+// Bootstrap doesn't seem to have provided a way to customize this
+// !important makes a difference in terms of overriding the defaults
+.navbar-brand {
+  width: 300px !important;
+  height: 50px !important;
+  margin-top: 5px;
+  background: transparent url(ecds_geo_logo.png) no-repeat left !important;
+}
+
+// Override the navbar toggle (in responsive layout)
+.navbar-inverse .navbar-toggle:hover {
+  border-color: #8499ca !important;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+  background-color: #012169 !important;
 }
