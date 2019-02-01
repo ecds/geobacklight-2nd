@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'geo_combine'
 gem 'mysql2'
 #gem 'capistrano-rails'
 gem 'sidekiq'
